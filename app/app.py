@@ -148,45 +148,76 @@ if menu == "🏠 Dashboard":
     col4.metric("📦 Total Claims",    run_query("SELECT COUNT(*) as c FROM claims")["c"][0])
 
     st.markdown("---")
-    col5,col6 = st.columns(2)
+
+    col5, col6 = st.columns(2)
+
     with col5:
-    df = run_query("""
-        SELECT location, COUNT(*) AS count
-        FROM food_listings
-        GROUP BY location
-        ORDER BY count DESC
-    """)
+        df = run_query("""
+            SELECT location, COUNT(*) AS count
+            FROM food_listings
+            GROUP BY location
+            ORDER BY count DESC
+        """)
 
-    st.write("Columns:", df.columns.tolist())
-
-    if not df.empty and "location" in df.columns and "count" in df.columns:
-        fig = px.bar(
-            df,
-            x="location",
-            y="count",
-            title="📍 Food Listings by City",
-            color_discrete_sequence=["#2ecc71"]
-        )
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.error(f"Columns found: {df.columns.tolist()}")
+        if not df.empty:
+            fig = px.bar(
+                df,
+                x="location",
+                y="count",
+                title="Food Listings by City"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
     with col6:
-        df2 = run_query("SELECT status, COUNT(*) as count FROM claims GROUP BY status")
-        st.plotly_chart(px.pie(df2, names="status", values="count",
-                               color_discrete_sequence=["#2ecc71","#e74c3c","#f39c12"],
-                               title="📊 Claim Status Distribution"),
-                        use_container_width=True)
+        df2 = run_query("""
+            SELECT status, COUNT(*) AS count
+            FROM claims
+            GROUP BY status
+        """)
 
-    col7,col8 = st.columns(2)
+        if not df2.empty:
+            fig = px.pie(
+                df2,
+                names="status",
+                values="count",
+                title="Claim Status Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    col7, col8 = st.columns(2)
+
     with col7:
-        df3 = run_query("SELECT food_type, COUNT(*) as count FROM food_listings GROUP BY food_type")
-        st.plotly_chart(px.pie(df3, names="food_type", values="count", title="🍽️ Food Type Distribution"),
-                        use_container_width=True)
+        df3 = run_query("""
+            SELECT food_type, COUNT(*) AS count
+            FROM food_listings
+            GROUP BY food_type
+        """)
+
+        if not df3.empty:
+            fig = px.pie(
+                df3,
+                names="food_type",
+                values="count",
+                title="Food Type Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
     with col8:
-        df4 = run_query("SELECT meal_type, COUNT(*) as count FROM food_listings GROUP BY meal_type ORDER BY count DESC")
-        st.plotly_chart(px.bar(df4, x="meal_type", y="count", title="🥗 Meal Type Distribution", color_discrete_sequence=px.colors.qualitative.Set2),
-                        use_container_width=True)
+        df4 = run_query("""
+            SELECT meal_type, COUNT(*) AS count
+            FROM food_listings
+            GROUP BY meal_type
+            ORDER BY count DESC
+        """)
+
+        if not df4.empty:
+            fig = px.bar(
+                df4,
+                x="meal_type",
+                y="count",
+                title="Meal Type Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════
 # 2. SQL ANALYSIS
