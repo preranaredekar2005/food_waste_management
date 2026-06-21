@@ -1,0 +1,101 @@
+Food_ID,Food_Name,Quantity,Expiry_Date,Provider_ID,Provider_Type,Location,Food_Type,Meal_Type
+1,Mixed Snacks,87,2025-09-30,1,Canteen,Pune,Non-Vegetarian,Breakfast
+2,Poha,66,2025-02-28,12,Grocery Store,Mumbai,Vegetarian,Lunch
+3,Bread,192,2025-10-19,3,Hotel,Delhi,Non-Vegetarian,Breakfast
+4,Fruits,173,2025-10-01,5,Grocery Store,Kolkata,Non-Vegetarian,Lunch
+5,Mixed Snacks,113,2025-05-17,17,Canteen,Ahmedabad,Vegetarian,Lunch
+6,Curd Rice,117,2025-06-10,13,Grocery Store,Delhi,Vegan,Snacks
+7,Sambar,21,2025-03-04,8,Grocery Store,Delhi,Non-Vegetarian,Breakfast
+8,Sambar,155,2025-10-30,18,Supermarket,Chennai,Vegetarian,Breakfast
+9,Sambar,22,2025-02-07,2,Grocery Store,Delhi,Vegetarian,Dinner
+10,Sambar,76,2025-02-07,17,Canteen,Ahmedabad,Vegan,Snacks
+11,Fruits,190,2025-04-21,18,Supermarket,Chennai,Vegan,Snacks
+12,Salad,53,2025-05-06,16,Canteen,Bangalore,Vegetarian,Breakfast
+13,Curd Rice,113,2025-12-05,14,Restaurant,Ahmedabad,Non-Vegetarian,Snacks
+14,Dal,108,2025-01-29,4,Grocery Store,Mumbai,Vegan,Dinner
+15,Chapati,53,2025-02-26,8,Grocery Store,Delhi,Vegan,Snacks
+16,Biryani,76,2025-03-14,14,Restaurant,Ahmedabad,Non-Vegetarian,Lunch
+17,Pulao,30,2025-02-09,15,Supermarket,Hyderabad,Vegetarian,Breakfast
+18,Biryani,109,2025-02-18,8,Grocery Store,Delhi,Non-Vegetarian,Snacks
+19,Dal,47,2025-04-21,13,Grocery Store,Delhi,Non-Vegetarian,Breakfast
+20,Pasta,78,2025-07-20,9,Hotel,Hyderabad,Non-Vegetarian,Snacks
+21,Poha,60,2025-03-22,7,Grocery Store,Hyderabad,Vegetarian,Breakfast
+22,Dal,154,2025-06-11,2,Grocery Store,Delhi,Non-Vegetarian,Lunch
+23,Bread,52,2025-01-31,17,Canteen,Ahmedabad,Vegetarian,Breakfast
+24,Sandwich,35,2025-12-13,8,Grocery Store,Delhi,Vegan,Lunch
+25,Dal,163,2025-10-25,20,Restaurant,Pune,Vegetarian,Snacks
+26,Paneer Curry,138,2025-12-04,19,Supermarket,Chennai,Non-Vegetarian,Dinner
+27,Sambar,72,2025-04-16,11,Restaurant,Hyderabad,Non-Vegetarian,Lunch
+28,Pasta,85,2025-12-11,10,Supermarket,Delhi,Vegetarian,Breakfast
+29,Paneer Curry,30,2025-08-24,20,Restaurant,Pune,Vegetarian,Lunch
+30,Fruits,94,2025-09-18,9,Hotel,Hyderabad,Vegetarian,Lunch
+31,Biryani,117,2025-07-10,10,Supermarket,Delhi,Vegan,Dinner
+32,Rice,175,2025-11-11,17,Canteen,Ahmedabad,Vegan,Dinner
+33,Fruits,72,2025-12-07,4,Grocery Store,Mumbai,Vegetarian,Breakfast
+34,Idli,77,2025-10-12,5,Grocery Store,Kolkata,Vegan,Lunch
+35,Idli,134,2025-06-26,7,Grocery Store,Hyderabad,Non-Vegetarian,Dinner
+36,Salad,75,2025-01-28,3,Hotel,Delhi,Vegetarian,Breakfast
+37,Idli,46,2025-06-21,5,Grocery Store,Kolkata,Vegan,Snacks
+38,Pulao,7,2025-10-11,14,Restaurant,Ahmedabad,Vegetarian,Breakfast
+39,Pulao,14,2025-12-21,5,Grocery Store,Kolkata,Non-Vegetarian,Lunch
+40,Dal,83,2025-08-10,5,Grocery Store,Kolkata,Non-Vegetarian,Breakfast
+41,Sambar,175,2025-07-04,7,Grocery Store,Hyderabad,Vegetarian,Dinner
+42,Mixed Snacks,196,2025-10-15,14,Restaurant,Ahmedabad,Vegetarian,Lunch
+43,Salad,11,2025-03-26,6,Hotel,Mumbai,Vegetarian,Dinner
+44,Idli,45,2025-07-31,8,Grocery Store,Delhi,Vegan,Breakfast
+45,Soup,61,2025-07-16,2,Grocery Store,Delhi,Vegetarian,Snacks
+46,Sambar,62,2025-06-30,10,Supermarket,Delhi,Vegetarian,Lunch
+47,Idli,22,2025-07-25,11,Restaurant,Hyderabad,Non-Vegetarian,Dinner
+48,Sandwich,178,2025-11-26,17,Canteen,Ahmedabad,Vegan,Dinner
+49,Idli,50,2025-01-16,4,Grocery Store,Mumbai,Vegan,Dinner
+50,Mixed Snacks,116,2025-01-21,4,Grocery Store,Mumbai,Non-Vegetarian,Dinner
+51,Khichdi,34,2025-08-13,20,Restaurant,Pune,Non-Vegetarian,Lunch
+52,Salad,5,2025-05-12,2,Grocery Store,Delhi,Vegan,Lunch
+53,Bread,175,2025-07-07,14,Restaurant,Ahmedabad,Non-Vegetarian,Dinner
+54,Poha,134,2025-12-07,4,Grocery Store,Mumbai,Non-Vegetarian,Snacks
+55,Poha,146,2025-06-18,13,Grocery Store,Delhi,Vegetarian,Lunch
+56,Biryani,162,2025-08-05,13,Grocery Store,Delhi,Vegan,Dinner
+57,Rice,82,2025-07-28,18,Supermarket,Chennai,Non-Vegetarian,Lunch
+58,Mixed Snacks,172,2025-08-10,19,Supermarket,Chennai,Non-Vegetarian,Snacks
+59,Chapati,135,2025-08-16,15,Supermarket,Hyderabad,Non-Vegetarian,Lunch
+60,Poha,136,2025-12-05,3,Hotel,Delhi,Vegan,Dinner
+61,Poha,62,2025-02-18,8,Grocery Store,Delhi,Vegetarian,Lunch
+62,Sambar,126,2025-01-14,2,Grocery Store,Delhi,Vegan,Breakfast
+63,Paneer Curry,54,2025-08-23,14,Restaurant,Ahmedabad,Vegan,Snacks
+64,Sambar,42,2025-09-12,13,Grocery Store,Delhi,Vegan,Breakfast
+65,Sambar,50,2025-02-25,14,Restaurant,Ahmedabad,Vegan,Snacks
+66,Sambar,36,2025-01-27,18,Supermarket,Chennai,Non-Vegetarian,Lunch
+67,Pulao,157,2025-08-27,17,Canteen,Ahmedabad,Non-Vegetarian,Snacks
+68,Salad,145,2025-11-11,17,Canteen,Ahmedabad,Non-Vegetarian,Lunch
+69,Idli,197,2025-09-02,15,Supermarket,Hyderabad,Vegetarian,Dinner
+70,Sambar,75,2025-09-25,16,Canteen,Bangalore,Non-Vegetarian,Breakfast
+71,Idli,90,2025-05-28,8,Grocery Store,Delhi,Non-Vegetarian,Breakfast
+72,Sambar,103,2025-03-13,5,Grocery Store,Kolkata,Vegan,Lunch
+73,Bread,111,2025-12-29,7,Grocery Store,Hyderabad,Non-Vegetarian,Dinner
+74,Salad,20,2025-10-06,15,Supermarket,Hyderabad,Vegetarian,Snacks
+75,Rice,200,2025-07-20,19,Supermarket,Chennai,Vegan,Snacks
+76,Curd Rice,81,2025-09-03,1,Canteen,Pune,Non-Vegetarian,Snacks
+77,Mixed Snacks,61,2025-10-04,18,Supermarket,Chennai,Non-Vegetarian,Lunch
+78,Soup,12,2025-05-21,14,Restaurant,Ahmedabad,Non-Vegetarian,Dinner
+79,Biryani,124,2025-12-10,13,Grocery Store,Delhi,Vegetarian,Breakfast
+80,Paneer Curry,174,2025-07-22,19,Supermarket,Chennai,Vegetarian,Breakfast
+81,Fruits,123,2025-11-27,14,Restaurant,Ahmedabad,Vegetarian,Breakfast
+82,Upma,59,2025-05-15,13,Grocery Store,Delhi,Non-Vegetarian,Dinner
+83,Idli,197,2025-06-23,13,Grocery Store,Delhi,Non-Vegetarian,Dinner
+84,Rice,196,2025-02-12,16,Canteen,Bangalore,Vegan,Breakfast
+85,Bread,171,2025-06-30,8,Grocery Store,Delhi,Vegetarian,Breakfast
+86,Rice,164,2025-05-08,7,Grocery Store,Hyderabad,Vegetarian,Lunch
+87,Vegetables,149,2025-03-07,16,Canteen,Bangalore,Vegetarian,Snacks
+88,Curd Rice,47,2025-12-26,9,Hotel,Hyderabad,Vegan,Breakfast
+89,Vegetables,153,2025-03-26,10,Supermarket,Delhi,Vegetarian,Dinner
+90,Sandwich,188,2025-10-23,13,Grocery Store,Delhi,Vegetarian,Breakfast
+91,Vegetables,183,2025-11-01,8,Grocery Store,Delhi,Non-Vegetarian,Breakfast
+92,Curd Rice,141,2025-10-18,2,Grocery Store,Delhi,Non-Vegetarian,Dinner
+93,Upma,8,2025-02-06,17,Canteen,Ahmedabad,Non-Vegetarian,Snacks
+94,Curd Rice,167,2025-02-25,14,Restaurant,Ahmedabad,Non-Vegetarian,Lunch
+95,Khichdi,171,2025-08-12,6,Hotel,Mumbai,Non-Vegetarian,Snacks
+96,Paneer Curry,73,2025-08-28,14,Restaurant,Ahmedabad,Non-Vegetarian,Lunch
+97,Pasta,67,2025-02-15,9,Hotel,Hyderabad,Non-Vegetarian,Snacks
+98,Soup,88,2025-06-23,1,Canteen,Pune,Vegetarian,Snacks
+99,Idli,92,2025-04-20,12,Grocery Store,Mumbai,Non-Vegetarian,Dinner
+100,Khichdi,53,2025-10-13,1,Canteen,Pune,Vegetarian,Lunch
