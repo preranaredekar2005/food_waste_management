@@ -150,9 +150,26 @@ if menu == "🏠 Dashboard":
     st.markdown("---")
     col5,col6 = st.columns(2)
     with col5:
-        df = run_query("SELECT location, COUNT(*) as count FROM food_listings GROUP BY location ORDER BY count DESC")
-        st.plotly_chart(px.bar(df, x="location", y="count", title="📍 Food Listings by City", color_discrete_sequence=["#2ecc71"]), use_container_width=True)
+    df = run_query("""
+        SELECT location, COUNT(*) AS count
+        FROM food_listings
+        GROUP BY location
+        ORDER BY count DESC
+    """)
 
+    st.write("Columns:", df.columns.tolist())
+
+    if not df.empty and "location" in df.columns and "count" in df.columns:
+        fig = px.bar(
+            df,
+            x="location",
+            y="count",
+            title="📍 Food Listings by City",
+            color_discrete_sequence=["#2ecc71"]
+        )
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.error(f"Columns found: {df.columns.tolist()}")
 
     with col6:
         df2 = run_query("SELECT status, COUNT(*) as count FROM claims GROUP BY status")
