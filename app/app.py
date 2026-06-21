@@ -165,7 +165,7 @@ if menu == "🏠 Dashboard":
         st.dataframe(df)
 
     with col6:
-    df2 = run_query("""
+        df2 = run_query("""
         SELECT status, COUNT(*) AS count
         FROM claims
         GROUP BY status
