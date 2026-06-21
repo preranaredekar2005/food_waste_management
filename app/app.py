@@ -315,7 +315,7 @@ elif menu == "🔍 Filter & Search":
     st.dataframe(df,use_container_width=True)
     if not df.empty:
         c5,c6=st.columns(2)
-        with c5: st.plotly_chart(px.bar(df.groupby("location")["quantity"].sum().reset_index(),x="location",y="quantity",color="quantity",,title="Quantity by City"),use_container_width=True)
+        with c5: st.plotly_chart(px.bar(df.groupby("location")["quantity"].sum().reset_index(),x="location",y="quantity",title="Quantity by City"),use_container_width=True)
         with c6: st.plotly_chart(px.pie(df,names="food_type",title="Food Type Split"),use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════
