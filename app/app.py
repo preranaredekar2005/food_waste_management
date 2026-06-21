@@ -141,23 +141,28 @@ if menu == "🏠 Dashboard":
     st.markdown("#### Connecting surplus food providers with those in need")
     st.markdown("---")
 
-    col1,col2,col3,col4 = st.columns(4)
-    col1.metric("🏪 Total Providers", run_query("SELECT COUNT(*) as c FROM providers")["c"][0])
-    col2.metric("🤝 Total Receivers", run_query("SELECT COUNT(*) as c FROM receivers")["c"][0])
-    col3.metric("🍱 Food Listings",   run_query("SELECT COUNT(*) as c FROM food_listings")["c"][0])
-    col4.metric("📦 Total Claims",    run_query("SELECT COUNT(*) as c FROM claims")["c"][0])
+    col1, col2, col3, col4 = st.columns(4)
+
+    col1.metric("🏪 Total Providers",
+                run_query("SELECT COUNT(*) as c FROM providers")["c"][0])
+
+    col2.metric("🤝 Total Receivers",
+                run_query("SELECT COUNT(*) as c FROM receivers")["c"][0])
+
+    col3.metric("🍱 Food Listings",
+                run_query("SELECT COUNT(*) as c FROM food_listings")["c"][0])
+
+    col4.metric("📦 Total Claims",
+                run_query("SELECT COUNT(*) as c FROM claims")["c"][0])
 
     st.markdown("---")
 
     col5, col6 = st.columns(2)
 
     with col5:
-    df = run_query("""
-        SELECT * FROM food_listings LIMIT 5
-    """)
-
-    st.write(df.columns.tolist())
-    st.dataframe(df)
+        df = run_query("SELECT * FROM food_listings LIMIT 5")
+        st.write(df.columns.tolist())
+        st.dataframe(df)
 
     with col6:
         df2 = run_query("""
@@ -174,9 +179,6 @@ if menu == "🏠 Dashboard":
                 title="Claim Status Distribution"
             )
             st.plotly_chart(fig, use_container_width=True)
-
-    col7, col8 = st.columns(2)
-
     with col7:
         df3 = run_query("""
             SELECT food_type, COUNT(*) AS count
