@@ -166,12 +166,22 @@ if menu == "🏠 Dashboard":
 
     with col6:
     df2 = run_query("""
-        SELECT * FROM claims LIMIT 5
+        SELECT status, COUNT(*) AS count
+        FROM claims
+        GROUP BY status
     """)
 
-    st.write("CLAIMS COLUMNS:")
+    st.write(df2.head())
     st.write(df2.columns.tolist())
-    st.dataframe(df2)
+
+    if not df2.empty:
+        fig = px.pie(
+            df2,
+            names="status",
+            values="count",
+            title="Claim Status Distribution"
+        )
+        st.plotly_chart(fig, use_container_width=True)
     with col7:
         df3 = run_query("""
             SELECT food_type, COUNT(*) AS count
