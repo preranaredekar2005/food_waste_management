@@ -152,7 +152,7 @@ if menu == "🏠 Dashboard":
     with col5:
         df = run_query("SELECT location, COUNT(*) as count FROM food_listings GROUP BY location ORDER BY count DESC")
         st.plotly_chart(px.bar(df, x="location", y="count", color="count",
-                               color_continuous_scale="Greens", title="📍 Food Listings by City"),
+                               title="📍 Food Listings by City"),
                         use_container_width=True)
     with col6:
         df2 = run_query("SELECT status, COUNT(*) as count FROM claims GROUP BY status")
@@ -168,7 +168,7 @@ if menu == "🏠 Dashboard":
                         use_container_width=True)
     with col8:
         df4 = run_query("SELECT meal_type, COUNT(*) as count FROM food_listings GROUP BY meal_type ORDER BY count DESC")
-        st.plotly_chart(px.bar(df4, x="meal_type", y="count", color="meal_type", title="🥗 Meal Type Distribution"),
+        st.plotly_chart(px.bar(df4, x="meal_type", y="count", title="🥗 Meal Type Distribution", color_discrete_sequence=px.colors.qualitative.Set2),
                         use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════
@@ -281,7 +281,7 @@ elif menu == "📊 SQL Analysis (15 Queries)":
                 if isinstance(y_col,list):
                     fig=px.bar(df,x=q["x"],y=y_col,barmode="group",color_discrete_sequence=px.colors.qualitative.Set2)
                 else:
-                    fig=px.bar(df,x=q["x"],y=y_col,color=y_col,color_continuous_scale="Greens")
+                    fig=px.bar(df,x=q["x"],y=y_col,color=y_col,)
                 st.plotly_chart(fig,use_container_width=True)
             elif q.get("chart")=="pie":
                 fig=px.pie(df,names=q["names"],values=q["values"],color_discrete_sequence=px.colors.qualitative.Set2)
@@ -315,7 +315,7 @@ elif menu == "🔍 Filter & Search":
     st.dataframe(df,use_container_width=True)
     if not df.empty:
         c5,c6=st.columns(2)
-        with c5: st.plotly_chart(px.bar(df.groupby("location")["quantity"].sum().reset_index(),x="location",y="quantity",color="quantity",color_continuous_scale="Greens",title="Quantity by City"),use_container_width=True)
+        with c5: st.plotly_chart(px.bar(df.groupby("location")["quantity"].sum().reset_index(),x="location",y="quantity",color="quantity",,title="Quantity by City"),use_container_width=True)
         with c6: st.plotly_chart(px.pie(df,names="food_type",title="Food Type Split"),use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════
